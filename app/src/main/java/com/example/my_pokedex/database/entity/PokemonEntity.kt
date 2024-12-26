@@ -1,4 +1,4 @@
-package com.example.my_pokedex.database.Entity
+package com.example.my_pokedex.database.entity
 
 import androidx.annotation.NonNull
 import androidx.room.Entity

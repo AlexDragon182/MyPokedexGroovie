@@ -6,6 +6,10 @@ plugins {
     id "kotlin-parcelize"
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs'
+    id 'com.google.devtools.ksp' version '1.9.0-1.0.13'
+
+
+
 }
 
 android {
@@ -15,7 +19,7 @@ android {
     defaultConfig {
         applicationId "com.example.my_pokedex"
         minSdk 27
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -48,6 +52,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
+
+
     // Activity
     implementation "androidx.activity:activity-ktx:1.6.1"
     // ViewModel
@@ -74,10 +80,11 @@ dependencies {
     implementation("androidx.room:room-runtime:2.4.3")
     annotationProcessor("androidx.room:room-compiler:2.4.3")
     implementation("androidx.room:room-ktx:2.4.3")
-    kapt ("androidx.room:room-compiler:2.4.3")
+    ksp ("androidx.room:room-compiler:2.4.3")
+
     //dagger hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    ksp "com.google.dagger:hilt-android-compiler:$hilt_version"
     //annotationProcessor "com.google.dagger:hilt-compiler:$hilt_version"
     //SplashScreen
     implementation 'androidx.core:core-splashscreen:1.0.1'

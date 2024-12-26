@@ -1,7 +1,8 @@
 package com.example.my_pokedex.features.pokedex.data
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.map
+//import androidx.lifecycle.Transformations
 import com.example.my_pokedex.database.PokemonDao
 import com.example.my_pokedex.database.entity.PokemonEntity
 import com.example.my_pokedex.features.PokemonDetails.data.toPokemonDetailsModel
@@ -78,7 +79,7 @@ class PokedexRepositoryImpl @Inject constructor(
 
     override fun getAllPokemonFromDB(): LiveData<List<PokemonResultModel>>{
         val pokemonListFromDB = localDataSource.getAllPokemon()
-        val pokemonListFromDBToModel = Transformations.map(pokemonListFromDB){it-> it.map { PokemonResultModel(name = it.name) }}
+        val pokemonListFromDBToModel = pokemonListFromDB.map{it-> it.map { PokemonResultModel(name = it.name) }}
         return pokemonListFromDBToModel
     }
 
