@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">my_pokedex</string>
+    <string name="title">Pokedex</string>
+    <string name="pokedex_screen_title">Pokedex</string>
+    <string name="search_text_hint">Search for your pokemon</string>
+    <string name="search_text_button">Search pokemon</string>
+    <string name="no_results_text">No results</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pokedex_item_content_description">pokeball</string>
+    <string name="pokedex_item_content_checkmark">checkmark</string>
+
+    <string name="bug_color">#95ad66</string>
+    <string name="dark_color">#1e1f1e</string>
+    <string name="dragon_color">#4412c4</string>
+    <string name="electric_color">#dbce16</string>
+    <string name="fairy_color">#c973bc</string>
+    <string name="fighting_color">#542319</string>
+    <string name="fire_color">#b03621</string>
+    <string name="flying_color">#5c8eb5</string>
+    <string name="ghost_color">#343d8c</string>
+    <string name="grass_color">#41a346</string>
+    <string name="ground_color">#a37c41</string>
+    <string name="ice_color">#45d1de</string>
+    <string name="normal_color">#828e8f</string>
+    <string name="poison_color">#6a259c</string>
+    <string name="psychic_color">#bc2dc4</string>
+    <string name="rock_color">#7a3c0c</string>
+    <string name="steel_color">#544f4e</string>
+    <string name="water_color">#2762ba</string>
 </resources>

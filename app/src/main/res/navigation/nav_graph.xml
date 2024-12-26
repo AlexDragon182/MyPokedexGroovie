@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pokedex">
+
+    <fragment
+        android:id="@+id/pokedex"
+        android:name="com.example.my_pokedex.features.pokedex.presentation.PokedexFragment"
+        android:label="pokedex"
+        tools:layout="@layout/fragment_pokedex">
+        <action
+            android:id="@+id/action_pokedexFragment_to_pokemonDetailsFragment"
+            app:destination="@id/pokemon_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/pokemon_details"
+        android:name="com.example.my_pokedex.features.PokemonDetails.presentation.PokemonDetailsFragment"
+        android:label="PokemonDetailsFragment"
+        tools:layout="@layout/fragment_pokemon_details">
+        <action
+            android:id="@+id/action_pokedexFragment_to_pokemonDetailsFragment"
+            app:destination="@id/pokemon_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="pokemonName"
+            app:argType="string" />
+    </fragment>
+</navigation>
